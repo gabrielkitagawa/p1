@@ -4,7 +4,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter_application_1/view/cadastro_view.dart';
 import 'package:flutter_application_1/view/carrinho_view.dart';
 import 'package:flutter_application_1/view/credencial_view.dart';
-import 'package:flutter_application_1/view/loja_view.dart';
+import 'package:flutter_application_1/view/lista_view.dart';
+import 'package:flutter_application_1/view/novalista_view.dart';
 import 'package:flutter_application_1/view/resenhar_view.dart';
 import 'view/login_view.dart';
 
@@ -31,8 +32,9 @@ class MainApp extends StatelessWidget {
         'cadastro': (context) => CadastroView(),
         'resenhar': (context) => ResenharView(),
         'credencial': (context) => CredencialView(),
-        'loja': (context) => LojaView(),
+        'lista': (context) => ListaView(),
         'carrinho': (context) => CarrinhoView(),
+        'novalista': (context) => NovalistaView(),
       },
     );
   }

@@ -23,6 +23,7 @@ class _ResenharView extends State<ResenharView> {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(50, 50, 50, 50),

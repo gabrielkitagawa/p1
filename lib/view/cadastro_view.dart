@@ -23,6 +23,7 @@ class _CadastroViewState extends State<CadastroView> {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white), // Definindo a cor do ícone
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(50, 50, 50, 50),

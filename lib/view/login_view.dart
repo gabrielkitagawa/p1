@@ -18,7 +18,7 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('LOGIN',
-          style: TextStyle(color: Colors.white), // Letras brancas
+          style: TextStyle(color: Colors.white), 
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
@@ -42,14 +42,13 @@ class _LoginViewState extends State<LoginView> {
 
               TextFormField(
                 controller: emailController,
-                style: TextStyle(fontSize: 20), // Tamanho da fonte 20
+                style: TextStyle(fontSize: 20), 
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.blue),
                   ),
                   prefixIcon: Icon(Icons.mail),
-                  contentPadding: EdgeInsets.symmetric(vertical: 20), // Espaçamento vertical
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -61,7 +60,7 @@ class _LoginViewState extends State<LoginView> {
                 },
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 10),
 
               TextFormField(
                 controller: senhaController,
@@ -82,26 +81,29 @@ class _LoginViewState extends State<LoginView> {
                 },
                 obscureText: true,
               ),
-              SizedBox(height: 20),
+
+              SizedBox(height: 30),
+
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Cor de fundo azul
+                  backgroundColor: Colors.blue, 
                   minimumSize: Size(200, 50),
                 ),
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     final email = emailController.text;
                     final senha = senhaController.text;
-                    // Faça o que quiser com o email e senha
-                    Navigator.pushNamed(context, 'loja');
+                    Navigator.pushNamed(context, 'lista');
                   }
                 },
                 child: Text('LOGIN', style: TextStyle(fontSize: 15, color: Colors.white)), // Tamanho da fonte 20 e cor branca
               ),
+
               SizedBox(height: 10),
+
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Cor de fundo azul
+                  backgroundColor: Colors.blue, 
                   minimumSize: Size(200, 50),
                 ),
                 onPressed: () {
@@ -109,27 +111,33 @@ class _LoginViewState extends State<LoginView> {
                 },
                 child: Text('Criar Conta', style: TextStyle(fontSize: 15, color: Colors.white)), // Tamanho da fonte 20 e cor branca
               ),
-              SizedBox(height: 10),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Cor de fundo azul
-                  minimumSize: Size(200, 50),
+
+              SizedBox(height: 50),
+
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor:  Colors.white, 
+                  minimumSize: Size(200, 10),
+                  side: BorderSide.none,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, 'resenhar');
                 },
-                child: Text('Esqueci minha senha', style: TextStyle(fontSize: 15, color: Colors.white)), // Tamanho da fonte 20 e cor branca
+                child: Text('Esqueci minha senha', style: TextStyle(fontSize: 15, color: Colors.blue)), // Tamanho da fonte 20 e cor branca
               ),
+
               SizedBox(height: 10),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Cor de fundo azul
-                  minimumSize: Size(200, 50),
+
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor:  Colors.transparent, 
+                  minimumSize: Size(200, 10),
+                  side: BorderSide.none,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, 'credencial');
                 },
-                child: Text('Credenciais do desenvolvedor', style: TextStyle(fontSize: 15, color: Colors.white)), // Tamanho da fonte 20 e cor branca
+                child: Text('Credenciais do desenvolvedor', style: TextStyle(fontSize: 15, color: Colors.blue)), // Tamanho da fonte 20 e cor branca
               ),
             ],
           ),

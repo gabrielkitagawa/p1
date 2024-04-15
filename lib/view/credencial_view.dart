@@ -23,6 +23,7 @@ class _CredencialView extends State<CredencialView> {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
         body: Padding(
             padding: EdgeInsets.fromLTRB(50, 100, 50, 100),
