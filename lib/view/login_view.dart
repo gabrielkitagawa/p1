@@ -9,7 +9,7 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
+  
   final TextEditingController emailController = TextEditingController();
   final TextEditingController senhaController = TextEditingController();
 

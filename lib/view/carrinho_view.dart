@@ -14,7 +14,7 @@ class _CarrinhoView extends State<CarrinhoView> {
       appBar: AppBar(
         title: Text(
           'Carrinho',
-          style: TextStyle(color: Colors.white), // Letras brancas
+          style: TextStyle(color: Colors.white), 
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
@@ -39,7 +39,7 @@ class _CarrinhoView extends State<CarrinhoView> {
                           IconButton(
                             icon: Icon(Icons.edit),
                             onPressed: () {
-                              // Adicione aqui a lógica para editar a lista
+                              
                             },
                           ),
                         ],
@@ -51,7 +51,7 @@ class _CarrinhoView extends State<CarrinhoView> {
                     Navigator.pushNamed(context, '/carrinho');
                   },
                 ),
-                // Adicione mais ListTiles conforme necessário
+                
               ],
             ),
           ),
@@ -63,8 +63,8 @@ class _CarrinhoView extends State<CarrinhoView> {
           SizedBox(height: 20),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              shape: CircleBorder(), // Para tornar o botão redondo
-              padding: EdgeInsets.all(20), // Espaçamento interno
+              shape: CircleBorder(), 
+              padding: EdgeInsets.all(20), 
              
             ),
             onPressed: () {

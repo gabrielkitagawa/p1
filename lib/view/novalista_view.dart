@@ -18,10 +18,10 @@ class _NovalistaViewState extends State<NovalistaView> {
   int quantidade = 1;
   List<Item> itensLista = [];
   TextEditingController itemNameController = TextEditingController();
-  String nomeItem = ''; // Variável para armazenar o nome do item
-  String nomeLista = ''; // Variável para armazenar o nome da lista
+  String nomeItem = ''; 
+  String nomeLista = ''; 
 
-  bool mostrarLista = false; // Variável para controlar a visibilidade da lista
+  bool mostrarLista = false; 
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class _NovalistaViewState extends State<NovalistaView> {
               ),
               onChanged: (value) {
                 setState(() {
-                  // Atualiza o nome da lista sempre que o texto no TextFormField muda
+                 
                   nomeLista = value;
                 });
               },
@@ -85,7 +85,7 @@ class _NovalistaViewState extends State<NovalistaView> {
                                 decoration: InputDecoration(labelText: 'Nome'),
                                 onChanged: (value) {
                                   setState(() {
-                                    // Atualiza o nome do novo item sempre que o texto no TextFormField muda
+                                    
                                     nomeItem = value;
                                   });
                                 },
@@ -137,7 +137,7 @@ class _NovalistaViewState extends State<NovalistaView> {
                                         itensLista.add(Item(nome: nome, quantidade: quantidade));
                                         itemNameController.clear();
                                         nomeItem = '';
-                                        quantidade = 1; // Limpa o nome do item após adicionar à lista
+                                        quantidade = 1; 
                                         mostrarLista = true;
                                       });
                                       Navigator.pop(context);
@@ -184,7 +184,7 @@ class _NovalistaViewState extends State<NovalistaView> {
 
             SizedBox(height: 20),
 
-            // Exibe o nome da lista
+            
             Text(
               'Lista: $nomeLista',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -192,7 +192,7 @@ class _NovalistaViewState extends State<NovalistaView> {
 
             SizedBox(height: 10),
 
-            // Mostra a ListView apenas quando mostrarLista for verdadeira
+            
             if (mostrarLista)
               Expanded(   
                 child: ListView.builder(
@@ -222,6 +222,7 @@ class _NovalistaViewState extends State<NovalistaView> {
           ),
           onPressed: () {},
           child: Text('Gerar lista', style: TextStyle(fontSize: 15, color: Colors.white)),
+          
         ),
       ),
     );

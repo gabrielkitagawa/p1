@@ -9,9 +9,7 @@ class CredencialView extends StatefulWidget {
 
 var formKey = GlobalKey<FormState>();
 
-//Controladores dos Campos de Texto
-//var email = TextEditingController();
-//var senha = TextEditingController();
+
 
 class _CredencialView extends State<CredencialView> {
   @override
@@ -19,7 +17,7 @@ class _CredencialView extends State<CredencialView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('CREDENCIAIS',
-          style: TextStyle(color: Colors.white), // Letras brancas
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,

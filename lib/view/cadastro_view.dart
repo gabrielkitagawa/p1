@@ -9,6 +9,7 @@ class CadastroView extends StatefulWidget {
 
 class _CadastroViewState extends State<CadastroView> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController nomeController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController senhaController = TextEditingController();
   final TextEditingController confirmaSenhaController = TextEditingController();
@@ -32,18 +33,22 @@ class _CadastroViewState extends State<CadastroView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
               TextFormField(
+                controller: nomeController,
                 style: TextStyle(fontSize: 20),
                 decoration: InputDecoration(
                   labelText: 'Nome',
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.person),
                 ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Informe um nome';
+                  }
+                  return null;
+                },
               ),
-
               SizedBox(height: 30),
-
               TextFormField(
                 style: TextStyle(fontSize: 20),
                 controller: emailController,
@@ -102,15 +107,18 @@ class _CadastroViewState extends State<CadastroView> {
               SizedBox(height: 30),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Cor de fundo azul
-                minimumSize: Size(200, 50),
+                  backgroundColor: Colors.blue, 
+                  minimumSize: Size(200, 50),
                 ),
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     Navigator.pop(context);
                   }
                 },
-                child: Text('REGISTRAR',style: TextStyle(fontSize: 15, color: Colors.white)),
+                child: Text(
+                  'REGISTRAR',
+                  style: TextStyle(fontSize: 15, color: Colors.white),
+                ),
               ),
             ],
           ),
