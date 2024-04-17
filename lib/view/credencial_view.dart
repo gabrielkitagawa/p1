@@ -24,19 +24,22 @@ class _CredencialView extends State<CredencialView> {
         iconTheme: IconThemeData(color: Colors.white),
       ),
         body: Padding(
-            padding: EdgeInsets.fromLTRB(50, 100, 50, 100),
+            padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
             child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, 
+                Column(mainAxisAlignment: MainAxisAlignment.start, 
                 children: [
-              
-                 Text(
-              'este app é feito por bibiieiriririri.',
-              style: TextStyle(fontSize: 30),
-              
-              textAlign: TextAlign.center,
-            ),
-            
-  
+                                
+                Image.asset(
+                  'lib/imagens/dev.png',
+                  width: 200,
+                  height: 200,
+                ),
+                SizedBox(height: 30), 
+                Text(
+                  'este app é feito por bibiieiriririri.',
+                  style: TextStyle(fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
             ])));
   }
 }

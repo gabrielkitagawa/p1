@@ -42,7 +42,7 @@ class _ListaView extends State<ListaView> {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
             child: TextFormField(
               controller: pesquisaController,
               decoration: InputDecoration(
@@ -70,7 +70,7 @@ class _ListaView extends State<ListaView> {
                 return ListTile(
                   title: Text(
                     listaFiltrada[index],
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 20),
                   ),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -82,7 +82,7 @@ class _ListaView extends State<ListaView> {
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.delete),
+                        icon: Icon(Icons.delete, color: Color.fromARGB(166, 212, 37, 24),),
                         onPressed: () {
                           _mostrarDialogoExclusao(context, index);
                         },
@@ -98,17 +98,20 @@ class _ListaView extends State<ListaView> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+
           SizedBox(height: 20),
+
           ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape: CircleBorder(), 
-              padding: EdgeInsets.all(50), 
+            style: ElevatedButton.styleFrom( 
+              padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
+              backgroundColor:  Colors.blue,
             ),
             onPressed: () {
               Navigator.pushNamed(context, 'novalista');
             },
-            child: Icon(Icons.add, color: Colors.blue),
+            child: Icon(Icons.add, color: Colors.white, size: 50,),
           ),
+
           SizedBox(height: 40),
         ],
       ),

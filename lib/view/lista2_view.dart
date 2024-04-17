@@ -48,7 +48,7 @@ class _Lista2View extends State<Lista2View> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
             child: TextFormField(
               controller: pesquisaController,
               onChanged: (value) {
@@ -77,7 +77,7 @@ class _Lista2View extends State<Lista2View> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
             child: Row(
               children: [
                 Expanded(
@@ -156,7 +156,7 @@ class _Lista2View extends State<Lista2View> {
         ],
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -190,6 +190,8 @@ class _Lista2View extends State<Lista2View> {
           Row(
             children: [
               Checkbox(
+                activeColor: Colors.blue, 
+                checkColor: Colors.white, 
                 value: quantidades.containsKey(itemName) && quantidades[itemName]! > 0,
                 onChanged: (value) {
                   setState(() {
@@ -207,7 +209,7 @@ class _Lista2View extends State<Lista2View> {
           Row(
             children: [
               IconButton(
-                icon: Icon(Icons.remove),
+                icon: Icon(Icons.remove, size:15),
                 onPressed: () {
                   setState(() {
                     if (quantidade > 0) {
@@ -218,10 +220,10 @@ class _Lista2View extends State<Lista2View> {
               ),
               Text(
                 quantidade.toString(),
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 20),
               ),
               IconButton(
-                icon: Icon(Icons.add),
+                icon: Icon(Icons.add, size:15),
                 onPressed: () {
                   setState(() {
                     quantidades[itemName] = quantidade + 1;
@@ -229,7 +231,7 @@ class _Lista2View extends State<Lista2View> {
                 },
               ),
               IconButton(
-                icon: Icon(Icons.delete),
+                icon: Icon(Icons.delete, color: Color.fromARGB(166, 212, 37, 24),),
                 onPressed: () {
                   setState(() {
                     ListaMaterialConstrucao.remove(itemName);

@@ -30,9 +30,14 @@ class _ResenharView extends State<ResenharView> {
         child: Form(
           key: formKey,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
 
+              Image.asset(
+                'lib/imagens/resenhar.png',
+                 width: 200,
+                 height: 200,
+              ),
 
               SizedBox(height: 30),
 

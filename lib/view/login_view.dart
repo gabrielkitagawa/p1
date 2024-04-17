@@ -31,7 +31,6 @@ class _LoginViewState extends State<LoginView> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-
               Image.asset(
                 'lib/imagens/logo.png',
                  width: 200,
@@ -42,7 +41,7 @@ class _LoginViewState extends State<LoginView> {
 
               TextFormField(
                 controller: emailController,
-                style: TextStyle(fontSize: 20), 
+                style: TextStyle(fontSize: 15), 
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
@@ -60,16 +59,16 @@ class _LoginViewState extends State<LoginView> {
                 },
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 20),
 
               TextFormField(
                 controller: senhaController,
-                style: TextStyle(fontSize: 20), // Tamanho da fonte 20
+                style: TextStyle(fontSize: 15), // Tamanho da fonte 20
                 decoration: InputDecoration(
                   labelText: 'Senha',
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.lock),
-                  contentPadding: EdgeInsets.symmetric(vertical: 20), // Espaçamento vertical
+                  contentPadding: EdgeInsets.symmetric(vertical: 20), 
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -82,7 +81,7 @@ class _LoginViewState extends State<LoginView> {
                 obscureText: true,
               ),
 
-              SizedBox(height: 30),
+              SizedBox(height: 20),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -99,7 +98,7 @@ class _LoginViewState extends State<LoginView> {
                 child: Text('LOGIN', style: TextStyle(fontSize: 15, color: Colors.white)), // Tamanho da fonte 20 e cor branca
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 20),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(

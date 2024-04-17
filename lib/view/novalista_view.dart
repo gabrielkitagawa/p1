@@ -43,7 +43,7 @@ class _NovalistaViewState extends State<NovalistaView> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

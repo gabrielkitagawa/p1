@@ -31,11 +31,20 @@ class _CadastroViewState extends State<CadastroView> {
         child: Form(
           key: formKey,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
+              Image.asset(
+                'lib/imagens/cadastro.png',
+                 width: 150,
+                 height: 150,
+              ),
+
+              SizedBox(height: 20),
+
               TextFormField(
                 controller: nomeController,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                   labelText: 'Nome',
                   border: OutlineInputBorder(),
@@ -48,9 +57,11 @@ class _CadastroViewState extends State<CadastroView> {
                   return null;
                 },
               ),
-              SizedBox(height: 30),
+
+              SizedBox(height: 20),
+
               TextFormField(
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 15),
                 controller: emailController,
                 decoration: InputDecoration(
                   labelText: 'Insira um Email',
@@ -66,10 +77,12 @@ class _CadastroViewState extends State<CadastroView> {
                   return null;
                 },
               ),
-              SizedBox(height: 30),
+
+              SizedBox(height: 20),
+
               TextFormField(
                 controller: senhaController,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                   labelText: 'Insira uma Senha',
                   border: OutlineInputBorder(),
@@ -85,10 +98,10 @@ class _CadastroViewState extends State<CadastroView> {
                 },
                 obscureText: true,
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextFormField(
                 controller: confirmaSenhaController,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                   labelText: 'Confirme a Senha',
                   border: OutlineInputBorder(),
@@ -104,7 +117,9 @@ class _CadastroViewState extends State<CadastroView> {
                 },
                 obscureText: true,
               ),
-              SizedBox(height: 30),
+
+              SizedBox(height: 20),
+
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue, 
